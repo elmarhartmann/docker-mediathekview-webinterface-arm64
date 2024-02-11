@@ -4,7 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/conrad784/mediathekview-webinterface)](https://hub.docker.com/r/conrad784/mediathekview-webinterface)
 
 # docker-mediathekview
-X11rdp Version of Mediathekview
+X11rdp Version of Mediathekview also compiling for ARM64
 ## About
 Using this container allows you to run Mediathekview as a service and control it via webbrowser like Firefox or Chrome.
 The X11rdp feature is inherited from [https://github.com/jlesage/docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui).
