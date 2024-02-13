@@ -1,5 +1,6 @@
 # Pull base image.
-FROM jlesage/baseimage-gui:debian-10
+#FROM jlesage/baseimage-gui:debian-10
+FROM --platform=$BUILDPLATFORM jlesage/baseimage-gui:debian-11-v4.5.3
 
 ENV USER_ID=0 GROUP_ID=0 TERM=xterm
 
@@ -28,9 +29,9 @@ RUN apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Maximize only the main/initial window.
-RUN \
-    sed-patch 's/<application type="normal">/<application type="normal" title="Mediathekview">/' \
-        /etc/xdg/openbox/rc.xml
+#RUN \
+#    sed-patch 's/<application type="normal">/<application type="normal" title="Mediathekview">/' \
+#        /etc/xdg/openbox/rc.xml
 
 # Set environment variables.
 ENV APP_NAME="Mediathekview" \

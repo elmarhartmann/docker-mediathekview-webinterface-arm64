@@ -5,6 +5,8 @@
 
 # docker-mediathekview
 X11rdp Version of Mediathekview also compiling for ARM64
+
+COMPILING, BUT NOT YET RUNNING (Java missing)
 ## About
 Using this container allows you to run Mediathekview as a service and control it via webbrowser like Firefox or Chrome.
 The X11rdp feature is inherited from [https://github.com/jlesage/docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui).
