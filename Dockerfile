@@ -26,7 +26,19 @@ RUN apt-get install -y \
         vlc \
         flvstreamer \
         ffmpeg \
+#	gnupg \
     && rm -rf /var/lib/apt/lists/*
+
+
+# add liberica JRE
+#RUN wget -v -O bellsoft-gpg.key https://download.bell-sw.com/pki/GPG-KEY-bellsoft
+#RUN apt-key add bellsoft-gpg.key
+#RUN echo "deb [arch=arm64] https://apt.bell-sw.com/ stable main" | tee /etc/apt/sources.list.d/bellsoft.list
+#RUN apt-get install -y bellsoft-java21-runtime-full 
+##clean up
+#RUN rm -rf /var/lib/apt/lists/*
+RUN wget https://download.bell-sw.com/java/21.0.2+14/bellsoft-jre21.0.2+14-linux-aarch64-full.deb
+RUN dpkg -i bellsoft-jre21.0.2+14-linux-aarch64-full.deb
 
 # Maximize only the main/initial window.
 #RUN \
